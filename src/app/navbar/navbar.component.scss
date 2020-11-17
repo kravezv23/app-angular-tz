@@ -1,0 +1,102 @@
+@import "../../assets/scss/vars";
+@import "../../assets/scss/fonts";
+
+.header {
+  background-color: #181819;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: auto;
+    color: #f5f5f5;
+    height: 60px;
+  }
+  .logo__text {
+    position: relative;
+    padding-left: 53px;
+    font-size: 14px;
+    line-height: 17px;
+    color: rgb(255, 255, 255, 0.8);
+    text-transform: uppercase;
+    @extend %sfr-regular;
+    &::before {
+      content: "R";
+      color: rgb(255, 255, 255, 0.8);
+      font-size: 48px;
+      @extend %sfm-heavy;
+      position: absolute;
+      top: 5px;
+      right: 78px;
+    }
+    &::after {
+      content: "2";
+      color: #d0021b;
+      font-size: 24px;
+      @extend %sfm-heavy;
+      position: absolute;
+      bottom: -2px;
+      right: 69px;
+    }
+  }
+}
+.menu {
+  &__list-item {
+    display: inline-block;
+    padding-left: 35px;
+    &:first-child {
+      padding-left: 0;
+    }
+  }
+  &__list-link {
+    transition: all 0.5s;
+    &:hover {
+      color: #d0021b;
+      transition: all 0.7s;
+    }
+  }
+  &__icon {
+    display: flex;
+    text-align: center;
+    align-items: center;
+  }
+  &__input-search {
+    display: none;
+    outline: none;
+    border: none;
+    height: 24px;
+  }
+  &__btn {
+    background-color: #181819;
+    padding: 0;
+    margin: 0;
+    border: none;
+    outline: none;
+    margin-left: 20px;
+    & svg {
+      & path {
+        fill: #f5f5f5;
+      }
+    }
+    &:hover {
+      & svg {
+        & path {
+          transition: all 0.7s;
+          fill: #d0021b;
+        }
+      }
+    }
+  }
+}
+.btn-search {
+  position: relative;
+  margin-left: 0;
+  &:onclick {
+    .menu__input-search {
+      display: block;
+      width: 100px;
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
+}

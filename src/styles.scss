@@ -1,0 +1,181 @@
+@import "./assets/scss/vars";
+@import "./assets/scss/fonts";
+
+html {
+  box-sizing: border-box;
+  width: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+p {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-size: inherit;
+}
+
+body {
+  min-width: 320px;
+  overflow-x: hidden;
+  position: relative;
+  background-color: #f4f5f7;
+  @extend %sf-regular;
+  font-size: 18px;
+  line-height: 24px;
+  margin: 0 auto;
+  padding: 0 0;
+}
+
+.container {
+  max-width: 940px;
+  width: 100%;
+  margin: 0 auto;
+  //   background-color: rgb(116, 153, 112);
+}
+/* Надпись над заголовком красного цвета */
+.fs-24 {
+  font-size: 24px;
+  line-height: 55px;
+  color: #d0021b;
+  @extend %sf-l-italic;
+}
+/* Заголовки*/
+.fs-48 {
+  font-size: 48px;
+  line-height: 55px;
+  @extend %sf-heavy;
+}
+
+/* Заголовки секций */
+.fs-72 {
+  font-size: 72px;
+  line-height: 81px;
+  color: #000000;
+  @extend %sf-bold;
+}
+
+/* Текст в блоках */
+.fs-18 {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.mb-80 {
+  margin-bottom: 80px;
+}
+
+/* Закругление и падинг для блоков */
+.br24-p60 {
+  border-radius: 24px;
+  background-color: #fff;
+  padding: 60px;
+}
+/* Общие свойства для всех кнопок */
+
+.green {
+  font-size: 14px;
+  text-transform: uppercase;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  color: #50e3c2;
+  background-color: #0c2d3d;
+  @extend %sf-medium;
+  transition: all 0.7s;
+  cursor: pointer;
+  &:hover {
+    content: "";
+    transition: all 0.7s;
+    background-color: #d0021b;
+    color: #ffffff;
+  }
+}
+.red {
+  font-size: 14px;
+  text-transform: uppercase;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  color: #d0021b;
+  background-color: rgb(#d0021b, 0.1);
+  @extend %sf-medium;
+  transition: all 0.7s;
+  cursor: pointer;
+  &:hover {
+    transition: all 0.7s;
+    background-color: #d0021b;
+    color: #fff;
+  }
+}
+
+.slider-arrow-left,
+.slider-arrow-right {
+  width: 36px;
+  height: 36px;
+  padding: 6px;
+  background-color: rgb(208, 2, 27, 0.1);
+  border: none;
+  outline: none;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: all 0.7s;
+  &:hover {
+    background-color: rgb(208, 2, 27);
+    transition: all 0.7s;
+    & svg {
+      fill: #fff;
+    }
+  }
+}
+
+@media (max-width: 940px) {
+  .container {
+    padding: 0 16px;
+  }
+}
+@media (max-width: 625px) {
+  .fs-48 {
+    font-size: 38px;
+  }
+  .fs-24 {
+    font-size: 20px;
+  }
+  .fs-18 {
+    font-size: 16px;
+  }
+  .fs-72 {
+    font-size: 62px;
+  }
+  .community__inner {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+  .benefits__help-title {
+    font-size: 38px;
+  }
+}
